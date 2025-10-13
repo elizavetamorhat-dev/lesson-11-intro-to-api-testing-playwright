@@ -30,7 +30,7 @@ test('get order with incorrect id should receive code 400', async ({ request }) 
 test('post order with correct data should receive code 200', async ({ request }) => {
   const requestBody = OrderDTO.createOrderWithRandomData()
   const response = await request.post(BASE_URL, {
-    data: requestBody,
+    data: requestBody
   })
 
   const responseData: OrderDTO = await response.json()
