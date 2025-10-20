@@ -14,4 +14,12 @@ export class LoginDTO {
   static createLoginWithBrokenData(): LoginDTO {
     return new LoginDTO('', '')
   }
+
+  static createLoginWithMissingPassword(): object {
+    return { username: 'testUser' }
+  }
+
+  static createLoginWithInvalidTypes(): object {
+    return { username: 123, password: true }
+  }
 }
