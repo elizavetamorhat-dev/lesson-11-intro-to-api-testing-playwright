@@ -16,7 +16,7 @@ test('Login/student returns 200 and valid JWT', async ({ request }) => {
   expect(jwtValue).toMatch(jwtRegex)
 })
 
-test( 'Login/student returns 401 if credentials are invalid', async ({ request }) => {
+test('Login/student returns 401 if credentials are invalid', async ({ request }) => {
   const response = await request.post(`${BASE_URL}/login/student`, {
     data: LoginDTO.createLoginWithBrokenData(),
   })
